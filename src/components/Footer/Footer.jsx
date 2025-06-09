@@ -1,6 +1,6 @@
 import "./Footer.scss";
 
-const Footer = ({ref}) => {
+const Footer = ({ ref }) => {
   return (
     <div className="footer" id="about" ref={ref}>
       <div className="top">
@@ -55,7 +55,7 @@ const Footer = ({ref}) => {
           </div>
         </div>
         <div className="right">
-          <img src="/Public/img/payment.png" alt="payment" />
+          <img src="/img/payment.png" alt="payment" />
         </div>
       </div>
     </div>

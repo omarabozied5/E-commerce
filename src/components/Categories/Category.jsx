@@ -6,10 +6,7 @@ const Category = () => {
     <div className="catgories" id="category">
       <div className="col">
         <div className="row">
-          <img
-            src="../../Public/img/EKS_0176.png"
-            alt=""
-          />
+          <img src="/img/EKS_0176.png" alt="" />
           <button>
             <Link className="link" to="/products/1">
               Sale
@@ -17,10 +14,7 @@ const Category = () => {
           </button>
         </div>
         <div className="row">
-          <img
-            src="../../Public/img/EKS_0339.png"
-            alt=""
-          />
+          <img src="/img/EKS_0339.png" alt="" />
           <button>
             <Link className="link" to="/products/1">
               Women
@@ -30,7 +24,7 @@ const Category = () => {
       </div>
       <div className="col">
         <div className="row">
-          <img src="../../Public/img/EKS_0236.png" />
+          <img src="/img/EKS_0236.png" />
           <button>
             <Link className="link" to="/products/1">
               Accessories
@@ -42,7 +36,7 @@ const Category = () => {
         <div className="row">
           <div className="col">
             <div className="row">
-              <img src="../../Public/img/new.png" />
+              <img src="/img/new.png" />
               <button>
                 <Link className="link" to="/products/1">
                   NEW SEASON
@@ -52,7 +46,7 @@ const Category = () => {
           </div>
           <div className="col">
             <div className="row">
-              <img src="../../Public/img/EKS_9689.png" />
+              <img src="/img/EKS_9689.png" />
               <button>
                 <Link className="link" to="/products/1">
                   MEN
@@ -62,7 +56,7 @@ const Category = () => {
           </div>
         </div>
         <div className="row">
-          <img src="../../Public/img/EKS_9866.png" />
+          <img src="/img/EKS_9866.png" />
           <button>
             <Link className="link" to="/products/1">
               SHOES

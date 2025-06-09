@@ -3,15 +3,7 @@ import EastOutlinedIcon from "@mui/icons-material/EastOutlined";
 import WestOutlinedIcon from "@mui/icons-material/WestOutlined";
 import { useState } from "react";
 
-const data = [
-  "../../Public/img/EKS_9866.png"
-  ,
-  "../../Public/img/new.png",
-
-  "../../Public/img/EKS_9969.png"
-  ,
-  
-];
+const data = ["/img/EKS_9866.png", "/img/new.png", "/img/EKS_9969.png"];
 
 const Slider = () => {
   const [currentSlide, setCurrentSlide] = useState(0);

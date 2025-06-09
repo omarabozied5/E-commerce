@@ -1,14 +1,64 @@
+$primary-color: #1a365d;
+$secondary-color: #2d7dd2;
+$accent-color: #f7941d;
+$success-color: #48bb78;
+$warning-color: #ed8936;
+$error-color: #e53e3e;
+$text-primary: #2d3748;
+$text-secondary: #718096;
+$text-light: #a0aec0;
+$bg-primary: #ffffff;
+$bg-secondary: #f7fafc;
+$bg-accent: #edf2f7;
+$border-color: #e2e8f0;
+$shadow-sm:
+  0 1px 3px 0 rgba(0, 0, 0, 0.1),
+  0 1px 2px 0 rgba(0, 0, 0, 0.06);
+$shadow-md:
+  0 4px 6px -1px rgba(0, 0, 0, 0.1),
+  0 2px 4px -1px rgba(0, 0, 0, 0.06);
+$shadow-lg:
+  0 10px 15px -3px rgba(0, 0, 0, 0.1),
+  0 4px 6px -2px rgba(0, 0, 0, 0.05);
+
+// Mixins
+@mixin transition($properties: all, $duration: 0.3s, $timing: ease) {
+  transition: $properties $duration $timing;
+}
+
+@mixin hover-lift {
+  @include transition(transform);
+  &:hover {
+    transform: translateY(-2px);
+  }
+}
+
+@mixin button-base {
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  @include transition();
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+
+  &:hover {
+    transform: translateY(-1px);
+    box-shadow: $shadow-md;
+  }
+}
+
 .catgories {
   height: 80vh;
   display: flex;
-  gap: 10px;
-  margin: 10px;
+  gap: 15px;
+  margin: 20px;
 
   .col {
     flex: 1;
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 15px;
   }
 
   .col-l {
@@ -18,37 +68,45 @@
   .row {
     flex: 1;
     display: flex;
-    gap: 10px;
+    gap: 15px;
     position: relative;
     overflow: hidden;
+    border-radius: 12px;
+    box-shadow: $shadow-md;
 
     button {
       position: absolute;
-      min-width: 100px;
+      min-width: 120px;
       width: fit-content;
       height: 50px;
-      padding: 10px;
+      padding: 12px 20px;
       top: 0;
       right: 0;
       left: 0;
       bottom: 0;
       margin: auto;
-      cursor: pointer;
-      text-transform: uppercase;
-      border: none;
-      background-color: white;
-      font-size: 15px;
+      @include button-base;
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(10px);
+      color: $text-primary;
+      font-size: 14px;
+      z-index: 2;
 
-    }
-    button:hover{
-      background-color:#2879fe;
-      color: white;
+      &:hover {
+        background: $primary-color;
+        color: white;
+      }
     }
 
     img {
       width: 100%;
       height: 100%;
       object-fit: cover;
+      @include transition(transform);
+    }
+
+    &:hover img {
+      transform: scale(1.05);
     }
   }
 }
