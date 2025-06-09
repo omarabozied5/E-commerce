@@ -11,18 +11,18 @@ const Products = () => {
   const [selectedSubCat, setSelectedSubCat] = useState([]);
 
   const { data, loading, error } = useFetch(
-    `/sub-categories?[filter][categories][id][$eq]=${catId}`,
+    `/sub-categories?[filter][categories][id][$eq]=${catId}`
   );
-  console.log(catId)
+  console.log(catId);
 
   const hadnleChange = (e) => {
     const value = e.target.value;
     const isChecked = e.target.checked;
 
     setSelectedSubCat(
-      isChecked
-        ? [...selectedSubCat, value]
-        : selectedSubCat.filter((item) => item != value),
+      isChecked ?
+        [...selectedSubCat, value]
+      : selectedSubCat.filter((item) => item != value)
     );
   };
 
@@ -83,7 +83,7 @@ const Products = () => {
         </div>
       </div>
       <div className="right">
-        <img src="/Public/img/EKS_9969.png" alt="oddies" className="ctgImg" />
+        <img src="/img/EKS_9969.png" alt="oddies" className="ctgImg" />
         <List
           catId={catId}
           maxPrice={maxPrice}
