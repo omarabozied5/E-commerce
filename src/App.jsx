@@ -6,9 +6,6 @@ import Navbar from "./components/Navbar/Navbar";
 import Footer from "./components/Footer/Footer";
 
 import ScrollToHashElement from "./ScrolltoHash/ScrollToHash";
-
-
-import "./App.scss";
 import Contact from "./components/Contact/Contact";
 import Category from "./components/Categories/Category";
 
@@ -18,13 +15,13 @@ const Layout = () => {
   // const handleClick = () => {
   //   ref.current?.scrollIntoView({ behavior: 'smooth' });
   // };
-  
+
   return (
     <div className="app">
       <ScrollToHashElement />
-      <Navbar  />
+      <Navbar />
       <Outlet />
-      <Footer/>
+      <Footer />
     </div>
   );
 };
@@ -50,20 +47,17 @@ const route = createBrowserRouter([
         path: "/contact",
         element: <Contact />,
       },
-      
-       
     ],
-  
   },
   {
-    path:"/category",
-    element:<Category />
+    path: "/category",
+    element: <Category />,
   },
- 
-    {
-      path:"/about",
-      element: <Footer />
-    }
+
+  {
+    path: "/about",
+    element: <Footer />,
+  },
 ]);
 
 const App = () => {
